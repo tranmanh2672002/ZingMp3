@@ -1,7 +1,10 @@
 .wrapper {
     width: var(--default-layout-width-sidebar);
     background-color: #231b2e;
-    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .logo {
@@ -33,16 +36,31 @@
     align-items: center;
     padding: 10px 28px;
     text-decoration: none;
-
+    position: relative;
     color: var(--text-color);
+
+    .nav-item-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        height: 22px;
+        display: none;
+        svg {
+            font-size: 2.2rem;
+        }
+    }
 
     &:hover {
         color: var(--white-color);
+        .nav-item-icon {
+            display: block;
+        }
     }
 
     &.active {
         color: var(--white-color);
-        background-color: red;
+        background-color: #393243;
     }
 
     svg {

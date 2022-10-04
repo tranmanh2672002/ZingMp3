@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import { Link, NavLink } from 'react-router-dom';
 import { BsMusicNoteList, BsRecordCircle, BsPieChart, BsCardList } from 'react-icons/bs';
 import { IoRadioOutline } from 'react-icons/io5';
+import { AiOutlinePlayCircle } from 'react-icons/ai';
 
 const cx = classNames.bind(styles);
 
@@ -56,9 +57,12 @@ function SideBar() {
                     {navBar.map((item) => {
                         return (
                             <li key={item.id}>
-                                <NavLink to={item.to} className={(nav) => cx('nav-item', { active: nav.isActive })}>
+                                <NavLink end to={item.to} className={(nav) => cx('nav-item', { active: nav.isActive })}>
                                     {item.icon}
                                     {item.title}
+                                    <i className={cx('nav-item-icon')}>
+                                        <AiOutlinePlayCircle />
+                                    </i>
                                 </NavLink>
                             </li>
                         );
