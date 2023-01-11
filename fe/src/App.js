@@ -1,37 +1,33 @@
-import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import DefaultLayout from './components/Layout/DefaultLayout';
+import Header from '~/components/components/Header';
+import SideBar from '~/components/components/Sidebar';
+import PlayControl from '~/components/components/PlayControl';
+import Content from '~/components/components/Content';
 import { publicRoutes } from './routes';
 function App() {
     return (
         <Router>
             <div className="App">
+                <SideBar />
+                <Header />
                 <Routes>
                     {publicRoutes.map((route, i) => {
-                        let Layout = DefaultLayout;
-                        if (route.layout) {
-                            Layout = route.layout;
-                        } else if (route.layout === null) {
-                            Layout = Fragment;
-                        }
-
-                        const Page = route.component;
                         return (
                             <Route
                                 key={i}
                                 path={route.path}
                                 element={
-                                    <Layout>
-                                        <Page />
-                                    </Layout>
+                                    <Content>
+                                        <route.component />
+                                    </Content>
                                 }
                             />
                         );
                     })}
                 </Routes>
+                <PlayControl />
             </div>
-            ;
         </Router>
     );
 }

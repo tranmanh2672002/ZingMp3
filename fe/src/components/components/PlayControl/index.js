@@ -25,7 +25,7 @@ function PlayControl() {
     const [duration, setDuration] = useState(0);
     const [randomIndex, setRandomIndex] = useState(false);
     const [loopIndex, setLoopIndex] = useState(false);
-    const [volume, setVolume] = useState(50);
+    const [volume, setVolume] = useState(100);
 
     const audioRef = useRef();
 
@@ -58,13 +58,6 @@ function PlayControl() {
         audioRef.current.volume = x / 100;
     };
 
-    const handelVolumeIcon = () => {
-        if (volume === 0) {
-            return <BsVolumeOff className={cx('volume-icon')} />;
-        } else if (volume === 100) {
-            return <BsVolumeDown className={cx('volume-icon')} />;
-        } else return <BsVolumeUp className={cx('volume-icon')} />;
-    };
 
     const handleNextSong = () => {
         setAudioIndex((audioIndex + audios.length - 1) % audios.length);
@@ -170,7 +163,14 @@ function PlayControl() {
                     </div>
                 </div>
                 <div className={cx('play-control-right')}>
-                    <button className={cx('volume-btn')}>
+                    <button onClick={() => {
+                        if(volume > 0) {
+                            setVolume(0);
+                        } else {
+                            setVolume(50);
+
+                        }
+                    }} className={cx('volume-btn')}>
                         {volume === 0 ? (
                             <BsVolumeMute className={cx('volume-icon')} />
                         ) : volume === 100 ? (

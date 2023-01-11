@@ -4,41 +4,41 @@ import BinhYenNoiDau from '~/assets/musics/binhyennoidau.mp3';
 import BinhYenNoiDauImage from '~/assets/images/songs/binhyennoidau.jpg';
 import DaoNuong from '~/assets/musics/daonuong.mp3';
 import DaoNuongImage from '~/assets/images/songs/daonuong.jpg';
-import baMotKhongBay from '~/assets/musics/3107-2.m4a';
-import baMotKhongBayImage from '~/assets/images/songs/3107-2.jpg';
-import anhSaoVaBauTroi from '~/assets/musics/anhsaovabautroi.m4a';
-import anhSaoVaBauTroiImage from '~/assets/images/songs/anhsaovabautroi.jpg';
-import dynasty from '~/assets/musics/dynasty.m4a';
-import dynastyImage from '~/assets/images/songs/dynasty.jpg';
-import thiThoi from '~/assets/musics/thithoi.m4a';
-import thiThoiImage from '~/assets/images/songs/thithoi.jpg';
-import saiGonHomNayMua from '~/assets/musics/saigonhomnaymua.m4a';
-import saiGonHomNayMuaImage from '~/assets/images/songs/saigonhomnaymua.jpg';
+import BaMotKhongBay from '~/assets/musics/3107-2.m4a';
+import BaMotKhongBayImage from '~/assets/images/songs/3107-2.jpg';
+import AnhSaoVaBauTroi from '~/assets/musics/anhsaovabautroi.m4a';
+import AnhSaoVaBauTroiImage from '~/assets/images/songs/anhsaovabautroi.jpg';
+import Dynasty from '~/assets/musics/dynasty.m4a';
+import DynastyImage from '~/assets/images/songs/dynasty.jpg';
+import ThiThoi from '~/assets/musics/thithoi.m4a';
+import ThiThoiImage from '~/assets/images/songs/thithoi.jpg';
+import SaiGonHomNayMua from '~/assets/musics/saigonhomnaymua.m4a';
+import SaiGonHomNayMuaImage from '~/assets/images/songs/saigonhomnaymua.jpg';
 
 const audios = [
     {
-        src: anhSaoVaBauTroi,
+        src: AnhSaoVaBauTroi,
         title: 'Ánh sao và bầu trời',
         artist: 'T.R.I',
-        img: anhSaoVaBauTroiImage,
+        img: AnhSaoVaBauTroiImage,
     },
     {
-        src: dynasty,
+        src: Dynasty,
         title: 'Dynasty',
         artist: 'MIIA',
-        img: dynastyImage,
+        img: DynastyImage,
     },
     {
-        src: thiThoi,
+        src: ThiThoi,
         title: 'Thì thôi',
         artist: 'Ready',
-        img: thiThoiImage,
+        img: ThiThoiImage,
     },
     {
-        src: saiGonHomNayMua,
+        src: SaiGonHomNayMua,
         title: 'Sài gòn hôm nay mưa',
         artist: 'Hoàng Duyên, JSOL',
-        img: saiGonHomNayMuaImage,
+        img: SaiGonHomNayMuaImage,
     },
     {
         src: EmHatAiNghe,
@@ -59,10 +59,10 @@ const audios = [
         img: DaoNuongImage,
     },
     {
-        src: baMotKhongBay,
+        src: BaMotKhongBay,
         title: '3107-2',
         artist: 'Duong, W/N, Nâu',
-        img: baMotKhongBayImage,
+        img: BaMotKhongBayImage,
     },
 ];
 

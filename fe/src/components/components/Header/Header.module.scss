@@ -1,10 +1,11 @@
 .wrapper {
     height: var(--default-layout-height-header);
+    width: calc(100% - var(--default-layout-width-sidebar));
     background-color: #170f23;
     position: fixed;
     right: 0;
     top: 0;
-    left: var(--default-layout-width-sidebar);
+    z-index: 1000;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -30,13 +31,20 @@
     border: none;
     background-color: transparent;
     color: #eee;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .search-icon {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
     margin: 0 10px;
     cursor: pointer;
+}
+
+.search-title {
+    padding: 5px 12px;
+    // font-size: 1.6rem;
+    // font-weight: 500;
+    color: rgba(22, 24, 35, 0.5);
 }
 
 .header-right {
@@ -59,5 +67,5 @@
 
 .btn-icon {
     color: #eee;
-    font-size: 2rem;
+    font-size: 1.4rem;
 }

@@ -1,21 +1,21 @@
-import Mymusic from '../pages/Mymusic';
-import Zingchart from '../pages/Zingchart';
-import Home from '~/pages/Home';
+import MyMusic from '../pages/MyMusic';
+import ZingChart from '../pages/ZingChart';
 import Radio from '~/pages/Radio';
 import Follow from '~/pages/Follow';
+import HomePage from '~/pages/Home';
 
 const publicRoutes = [
     {
         path: '/',
-        component: Home,
+        component: HomePage,
     },
     {
-        path: '/my-music',
-        component: Mymusic,
+        path: '/myMusic',
+        component: MyMusic,
     },
     {
-        path: '/zing-chart',
-        component: Zingchart,
+        path: '/zingChart',
+        component: ZingChart,
     },
     {
         path: '/radio',

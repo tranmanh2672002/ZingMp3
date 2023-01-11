@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 const navBar = [
     {
         id: '1',
-        to: '/my-music',
+        to: '/myMusic',
         title: 'Cá Nhân',
         icon: <BsMusicNoteList />,
     },
@@ -22,7 +22,7 @@ const navBar = [
     },
     {
         id: '3',
-        to: '/zing-chart',
+        to: '/zingChart',
         title: '#zingchart',
         icon: <BsPieChart />,
     },

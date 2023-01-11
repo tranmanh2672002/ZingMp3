@@ -1,0 +1,8 @@
+.Content__wrapper {
+    position: fixed;
+    left: var(--default-layout-width-sidebar);
+    top: var(--default-layout-height-header);
+    bottom: var(--default-layout-height-play-control);
+    height: calc(100% - var(--default-layout-height-header) - var(--default-layout-height-play-control));
+    width: calc(100% - var(--default-layout-width-sidebar));
+}

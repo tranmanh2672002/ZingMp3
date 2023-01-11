@@ -1,13 +1,16 @@
-import classNames from 'classnames/bind';
-import styles from './Header.module.scss';
 import { BiSearch } from 'react-icons/bi';
 import { IoMdSettings } from 'react-icons/io';
 import { FiUpload, FiUser } from 'react-icons/fi';
 import Tippy from '@tippyjs/react/headless';
 
+import classNames from 'classnames/bind';
+import styles from './Header.module.scss';
+import { useState } from 'react';
+import ModalLogin from '../ModalLogin';
 const cx = classNames.bind(styles);
 
 function Header() {
+    const [openModalLogin, setOpenModalLogin] = useState(false);
     return (
         <div className={cx('wrapper')}>
             <Tippy
@@ -15,7 +18,7 @@ function Header() {
                 visible={false}
                 render={(attrs) => (
                     <div className={cx('search-results')} tabIndex="-1" {...attrs}>
-                        sadsads
+                        
                     </div>
                 )}
             >
@@ -37,9 +40,10 @@ function Header() {
                 <button className={cx('header-btn')}>
                     <IoMdSettings className={cx('btn-icon')} />
                 </button>
-                <button className={cx('header-btn')}>
+                <button onClick={() => setOpenModalLogin(true)} className={cx('header-btn')}>
                     <FiUser className={cx('btn-icon')} />
                 </button>
+                <ModalLogin openModalLogin={openModalLogin} setOpenModalLogin={setOpenModalLogin} />
             </div>
         </div>
     );

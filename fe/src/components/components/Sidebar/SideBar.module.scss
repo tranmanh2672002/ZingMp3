@@ -1,10 +1,7 @@
 .wrapper {
     width: var(--default-layout-width-sidebar);
+    height: 100vh;
     background-color: #231b2e;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
 }
 
 .logo {
@@ -27,6 +24,9 @@
 }
 
 .nav-list {
+    list-style: none;
+    width: 100%;
+    padding-left: 0;
 }
 
 .nav-item {
@@ -47,7 +47,7 @@
         height: 22px;
         display: none;
         svg {
-            font-size: 2.2rem;
+            font-size: 1.6rem;
         }
     }
 
@@ -56,6 +56,7 @@
         .nav-item-icon {
             display: block;
         }
+        background-color: #393243;
     }
 
     &.active {
@@ -64,7 +65,7 @@
     }
 
     svg {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         margin-right: 5px;
     }
 }
