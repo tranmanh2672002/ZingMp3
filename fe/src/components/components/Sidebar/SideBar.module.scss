@@ -27,6 +27,7 @@
     list-style: none;
     width: 100%;
     padding-left: 0;
+    
 }
 
 .nav-item {
@@ -38,7 +39,7 @@
     text-decoration: none;
     position: relative;
     color: var(--text-color);
-
+    
     .nav-item-icon {
         position: absolute;
         top: 50%;
@@ -57,11 +58,13 @@
             display: block;
         }
         background-color: #393243;
+        
     }
 
     &.active {
         color: var(--white-color);
         background-color: #393243;
+        
     }
 
     svg {

@@ -165,10 +165,9 @@ function PlayControl() {
                 <div className={cx('play-control-right')}>
                     <button onClick={() => {
                         if(volume > 0) {
-                            setVolume(0);
+                            handleVolumeChange({x: 0})
                         } else {
-                            setVolume(50);
-
+                            handleVolumeChange({x:100})
                         }
                     }} className={cx('volume-btn')}>
                         {volume === 0 ? (

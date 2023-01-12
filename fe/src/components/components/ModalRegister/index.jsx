@@ -57,21 +57,21 @@ function ModalRegister({ openModalRegister, setOpenModalRegister }) {
                             sx={{ marginTop: '30px' }}
                             fullWidth
                             autoComplete="off"
-                            label="Email"
+                            label="Tài khoản(email)"
                             onChange={(e) => {
                                 setEmail(e.target.value);
                             }}
                             name="email"
                             value={email}
                             validators={['required', 'isEmail']}
-                            errorMessages={['This field is required', 'Email is not valid']}
+                            errorMessages={['Vui lòng nhập trường này', 'Email không hợp lệ']}
                         />
                         <TextValidator
                             color="secondary"
                             sx={{ marginTop: '30px' }}
                             fullWidth
                             autoComplete="off"
-                            label="Password"
+                            label="Mật khẩu"
                             onChange={(e) => {
                                 setPassword(e.target.value);
                             }}
@@ -79,14 +79,14 @@ function ModalRegister({ openModalRegister, setOpenModalRegister }) {
                             name="password"
                             value={password}
                             validators={['required']}
-                            errorMessages={['This field is required']}
+                            errorMessages={['Vui lòng nhập trường này']}
                         />
                         <TextValidator
                             color="secondary"
                             sx={{ marginTop: '30px' }}
                             fullWidth
                             autoComplete="off"
-                            label="Password again"
+                            label="Nhập lại mật khẩu"
                             onChange={(e) => {
                                 setPasswordAgain(e.target.value);
                             }}
@@ -94,7 +94,7 @@ function ModalRegister({ openModalRegister, setOpenModalRegister }) {
                             name="password again"
                             value={passwordAgain}
                             validators={['isPasswordMatch', 'required']}
-                            errorMessages={['Password is not match', 'This field is required']}
+                            errorMessages={['Mật khẩu không khớp', 'Vui lòng nhập trường này']}
                         />
                         <Button
                             color="secondary"

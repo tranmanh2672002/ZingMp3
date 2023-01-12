@@ -11,7 +11,6 @@ import ModalRegister from '../ModalRegister';
 
 function ModalLogin({ openModalLogin, setOpenModalLogin }) {
     const [openModalRegister, setOpenModalRegister] = useState(false);
-    console.log(openModalRegister);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -67,7 +66,7 @@ function ModalLogin({ openModalLogin, setOpenModalLogin }) {
                             name="email"
                             value={email}
                             validators={['required', 'isEmail']}
-                            errorMessages={['This field is required', 'Email is not valid']}
+                            errorMessages={['Vui lòng nhập trường này', 'Email không hợp lệ']}
                         />
                         <TextValidator
                             color="secondary"
@@ -82,7 +81,7 @@ function ModalLogin({ openModalLogin, setOpenModalLogin }) {
                             name="password"
                             value={password}
                             validators={['required']}
-                            errorMessages={['This field is required']}
+                            errorMessages={['Vui lòng nhập trường này']}
                         />
                         <Button
                             sx={{ marginTop: '30px' }}
